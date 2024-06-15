@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
     private val model: StartViewModel by viewModels()
-    val beh by lazy { BottomSheetBehavior.from(bindind.bSheet)  }
+    private val beh by lazy { BottomSheetBehavior.from(bindind.bSheet)  }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(bindind.root)
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 false -> beh.state = CLOSE_BOTTOM_SHEET
             }
         }
+
 
 
     }

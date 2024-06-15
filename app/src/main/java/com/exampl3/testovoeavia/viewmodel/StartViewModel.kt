@@ -6,14 +6,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.exampl3.testovoeavia.data.OffersStart
-import com.exampl3.testovoeavia.model.TicketApi
+import com.exampl3.testovoeavia.model.retrofit.TicketApi
+import com.exampl3.testovoeavia.model.sharedPreference.SharedPreferenceImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class StartViewModel @Inject constructor(
-    private val retrofit: TicketApi
+    private val retrofit: TicketApi,
+    private val pref: SharedPreferenceImpl
 ): ViewModel() {
 
     init {
@@ -43,4 +45,7 @@ class StartViewModel @Inject constructor(
     fun openCloseSheet(flag: Boolean){
         _bottomSheet.value = flag
     }
+
+    fun getSP() = pref.getSP()
+    fun saveSP(value: String) = pref.saveSP(value)
 }

@@ -1,7 +1,6 @@
 package com.exampl3.testovoeavia.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,16 +8,11 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.exampl3.testovoeavia.R
 import com.exampl3.testovoeavia.databinding.FragmentStartBinding
-import com.exampl3.testovoeavia.model.TicketApi
 import com.exampl3.testovoeavia.view.adapters.FragStartAdapterLenta
 import com.exampl3.testovoeavia.viewmodel.StartViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import javax.inject.Inject
+
 @AndroidEntryPoint
 class FragmentStart : Fragment() {
 
@@ -42,6 +36,10 @@ class FragmentStart : Fragment() {
         binding.cardInput.setOnClickListener {
             model.openCloseSheet(true)
         }
+        binding.tvWhere.text = model.getSP()
+
+
+
 
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
