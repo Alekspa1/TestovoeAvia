@@ -9,4 +9,5 @@ object Const {
     const val KEY_INPUT_WHERE = "KEY_INPUT_WHERE"
     const val KEY_INPUT_FROM = "KEY_INPUT_FROM"
     const val KEY_INPUT_DATE = "KEY_INPUT_DATE"
+    const val KEY_INPUT_BOOLEAN = "KEY_INPUT_DATE"
 }

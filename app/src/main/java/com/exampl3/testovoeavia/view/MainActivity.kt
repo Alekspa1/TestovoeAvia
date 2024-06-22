@@ -1,7 +1,6 @@
 package com.exampl3.testovoeavia.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -38,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             true
         }
         model.bottomSheet.observe(this){flag->
-            Log.d("MyLog", flag.toString())
             when(flag) {
                 true -> beh.state = OPEN_BOTTOM_SHEET
                 false -> beh.state = CLOSE_BOTTOM_SHEET

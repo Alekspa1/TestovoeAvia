@@ -5,15 +5,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.exampl3.testovoeavia.R
-import com.exampl3.testovoeavia.data.Offer
-import com.exampl3.testovoeavia.data.OffersStart
+import com.exampl3.testovoeavia.data.ticketStart.Offer
+import com.exampl3.testovoeavia.data.ticketStart.OffersStart
 import com.exampl3.testovoeavia.databinding.ItemFragStartLentaBinding
 
 class FragStartAdapterLenta(private val lenta: OffersStart): RecyclerView.Adapter<FragStartAdapterLenta.Holder>() {
     class Holder(item: View) : RecyclerView.ViewHolder(item) {
         private val binding = ItemFragStartLentaBinding.bind(item)
         fun bind(item: Offer) = with(binding){
-            val price = "От ${item.price.value} ₽"
+            val number = item.price.value.toString()
+            val formattedNumber = "${number.substring(0, number.length - 3)} ${number.substring(number.length - 3)}"
+            val price = "От $formattedNumber ₽"
             itemTvTitle.text = item.title
             itemTvCity.text = item.town
             itemTvPrice.text = price

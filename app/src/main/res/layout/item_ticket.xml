@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imTitleAir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_18" />
+
+    <TextView
+        android:id="@+id/tvTitleAir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/rcViewAirTicket"
+        app:layout_constraintStart_toEndOf="@+id/imTitleAir"
+        app:layout_constraintTop_toTopOf="@+id/imTitleAir"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvPriceAir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/blue"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitleAir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleAir" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcViewAirTicket"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imTitleAir"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleAir"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleAir" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grey6"
+        android:backgroundTint="@color/grey6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvPriceAir"
+        app:layout_constraintStart_toStartOf="@+id/imTitleAir"
+        app:layout_constraintTop_toBottomOf="@+id/rcViewAirTicket" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

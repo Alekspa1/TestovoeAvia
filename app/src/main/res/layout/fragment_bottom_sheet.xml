@@ -306,10 +306,12 @@
                     <View
                         android:id="@+id/poloca2"
                         android:layout_width="0dp"
-                        android:layout_height="2dp"
+                        android:layout_height="1dp"
                         android:layout_gravity="center_horizontal|top"
                         android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
                         android:background="@color/Grey4"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/imageView9"
                         app:layout_constraintTop_toBottomOf="@+id/textView8"
                         tools:ignore="MissingConstraints" />
